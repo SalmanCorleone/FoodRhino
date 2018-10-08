@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="FinalProject.AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Admin UI</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+    body
+    {
+            background-image: url('Images/34.jpg');
+            background-position: repeat-y;
+            background-attachment: fixed;
+        }
+        .style2
+        {
+            height: 78px;
+            background-color: #00FFFF;
+            text-align: center;
+            font-family: Exo;
+        }
+        .style4
+        {
+            height: 106px;
+            background-color: #000099;
+            text-align: center;
+        }
+        .style8
+        {
+            width: 49px;
+        }
+        .style9
+        {
+            color: #FFFFFF;
+            font-family: Exo;
+            font-weight: normal;
+        }
+        .style10
+        {
+            width: 156px;
+        }
+        .style11
+        {
+            font-family: Exo;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <table style="width: 100%; height: 454px;">
+                <tr>
+                    <td class="style2" colspan="3">
+                        <h1>
+                            FoodRhino</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; background-color: #808080;" class="style10">
+                        <asp:Button ID="TransButton" runat="server" onclick="TransButton_Click" 
+                            Text="Transaction" Width="155px" 
+                            style="font-family: Exo; font-weight: 700;" />
+                        <br />
+                        <asp:Button ID="AgentButton" runat="server" onclick="Button2_Click" 
+                            Text="Agents" Width="155px" style="font-family: Exo; font-weight: 700;" />
+                        <br />
+                        <asp:Button ID="CustomerButton" runat="server" onclick="CustomerButton_Click" 
+                            Text="Customers" Width="155px" 
+                            style="font-family: Exo; font-weight: 700;" Height="27px" />
+                        <br />
+                        <asp:Button ID="RegButton" runat="server" 
+                            style="font-family: Exo; font-weight: 700" Text="Agent Registration" 
+                            Width="156px" onclick="RegButton_Click1" />
+                        <br />
+                        <asp:Button ID="outButton" runat="server" onclick="outButton_Click" 
+                            style="font-family: Exo; font-weight: 700" Text="LogOut" Width="156px" />
+                        <br />
+                        <br />
+                        <span class="style11"><br />
+                        </span>
+                        <asp:Label ID="Label1" runat="server" 
+                            style="font-family: Exo; color: #FFFFFF; font-weight: 700"></asp:Label>
+                        <br />
+                    </td>
+                    <td class="style8">
+                        &nbsp;</td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="Main" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style4" colspan="3">
+                        <h2 class="style9">
+                            Copyright (c) 2015</h2>
+                        <p class="style9">
+                            &nbsp;</p>
+                    </td>
+                </tr>
+            </table>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

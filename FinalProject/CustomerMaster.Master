@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CustomerMaster.master.cs" Inherits="FinalProject.CustomerMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>FoodRhino :Home</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            height: 366px;
+            background-color: #C0C0C0;
+            cursor: pointer;
+            width: 292px;
+        }
+        .style15
+        {
+            height: 213px;
+            border-left-color: #C0C0C0;
+            border-left-width: thin;
+            text-align: left;
+            background-color: #C0C0C0;
+        }
+        .style17
+        {
+            border: thin #C0C0C0;
+            height: 366px;
+            width: 314px;
+            cursor: pointer;
+            background-color: #C0C0C0;
+        }
+        .style28
+        {
+            height: 366px;
+            width: 622px;
+        }
+        .style32
+        {
+            height: 90px;
+            width: 622px;
+            background-color: #FF9933;
+            text-align: center;
+            font-family: "Market Deco";
+        }
+        .style36
+        {
+            height: 90px;
+            background-color: #808080;
+            width: 314px;
+            text-align: center;
+        }
+        .style37
+        {
+            height: 81px;
+            background-color: #0033CC;
+        }
+        .style38
+        {
+            height: 126px;
+            background-color: #99FFCC;
+            text-align: center;
+            font-weight: 700;
+        }
+        .style42
+        {
+            font-family: Exo;
+        }
+        .style43
+        {
+            height: 90px;
+            background-color: #808080;
+            width: 292px;
+            }
+        .style44
+        {
+            height: 28px;
+            border-left-color: #C0C0C0;
+            border-left-width: thin;
+            text-align: right;
+            background-color: #000066;
+        }
+        .style46
+        {
+            font-family: Exo;
+            color: #FFFFFF;
+        }
+         body 
+          {
+            background-image: url('Images/bg1.jpg');
+            background-position: repeat-y;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table style="padding: inherit; margin: auto; width:100%; height: 727px; ">
+        <tr>
+            <td class="style44" colspan="3">
+                <span class="style46">Logged in as </span>
+                    <asp:Label ID="NameLabel" runat="server" CssClass="style46"></asp:Label>
+            &nbsp;<asp:Button ID="LogOutButton" runat="server" Height="20px" 
+                    onclick="LogOutButton_Click1" 
+                    style="font-size: x-small; font-weight: 700; margin-bottom: 0px" Text="LogOut" 
+                    Width="85px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="style15" colspan="3">
+                &nbsp;&nbsp;<asp:Image ID="Cover" runat="server" Height="202px" 
+                    ImageUrl="~/Images/CoverEpic.png" Width="1306px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="style36">
+                <asp:ImageButton ID="HomeButtonLeft" runat="server" Height="86px" 
+                    ImageUrl="~/Images/HomeButton.jpg" onclick="ImageButton2_Click" 
+                    Width="372px" />
+            </td>
+            <td class="style32">
+                <h2>
+                    Welcome
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
+                </h2>
+            </td>
+            <td class="style43">
+                <asp:ImageButton ID="CartButton" runat="server" Height="86px" 
+                    ImageUrl="~/Images/CartButton.jpg" onclick="ImageButton1_Click1" 
+                    style="text-align: center" Width="323px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="style17">
+                <h3 style="font-family: Exo; height: 138px; width: 303px; text-align: center">
+                    Order food from your favourite restaurants online!<br />
+                    It&#39;s fast, cost-effective and secure.<br />
+                    <asp:Image ID="Image2" runat="server" Height="48px" 
+                        ImageUrl="~/Images/clock.jpg" Width="72px" />
+                    <asp:Image ID="Image3" runat="server" Height="49px" 
+                        ImageUrl="~/Images/cash.jpg" Width="80px" />
+                </h3>
+            </td>
+            <td class="style28">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <h1 style="width: 421px; height: 311px;" 
+                        align="center">
+                        &nbsp;</h1>
+                </asp:ContentPlaceHolder>
+            </td>
+            <td class="style1">
+                <h3 style="font-family: Exo; height: 138px; width: 303px; text-align: center">
+                    Visit Your Profile<br />
+                    <br />
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="88px" 
+                        ImageUrl="~/Images/User.jpg" onclick="ImageButton1_Click" Width="107px" />
+                </h3>
+            </td>
+        </tr>
+        <tr>
+            <td class="style37" colspan="3">
+            </td>
+        </tr>
+        <tr>
+            <td class="style38" colspan="3">
+                <h1 class="style42">
+                    Copyright (C) 2015</h1>
+                <p class="style42">
+                    contact us: 12, academy road, shankar, dhaka- 1209<br />
+                    email: <a href="mailto:salmansantino@gmail.com">salmansantino@gmail.com</a><br />
+                    facebook: www.facebook.com/foodRhino</p>
+            </td>
+        </tr>
+        </table>
+    </form>
+</body>
+</html>
